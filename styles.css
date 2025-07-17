@@ -64,7 +64,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 250px;
+    height: 300px;
     background: white;
     border-radius: 8px;
     overflow: hidden;
@@ -114,7 +114,7 @@ a {
     border-radius: 4px;
     cursor: pointer;
     transition: background 0.2s;
-    transform: translate(-60px,5px);
+    transform: translate(-60px,20px);
 }
 
 .btnn:hover, .btnn-view:hover {
