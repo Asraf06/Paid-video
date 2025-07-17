@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Videos - Favorites</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Study Videos</h1>
+    <div class="nav-links">
+      <span class="toggle" onclick="toggleDarkMode()">🌙 Dark Mode</span>
+      <a href="home.html" class="btn">Back to Home</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>Your Favorites</h2>
+    <div class="grid" id="favorites"></div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    if (!localStorage.getItem('loggedIn')) window.location.href = 'index.html';
+    loadFavorites();
+  </script>
+</body>
+</html>

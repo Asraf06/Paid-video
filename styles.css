@@ -1,0 +1,249 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+    background: #1a1a1a;
+    color: #f0f4f8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    background: #007bff;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 250px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    top: 0px;
+}
+
+.card h3 {
+    margin-top: 130px;
+}
+
+.card-body {
+    padding: 0.2rem;
+    text-align: center;
+}
+
+.btnn {
+    position: absolute;
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    transform: translate(-10px,30px);
+}
+
+.btnn-view {
+    position: absolute;
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    transform: translate(-60px,5px);
+}
+
+.btnn:hover, .btnn-view:hover {
+    background: #0056b3;
+}
+
+body.dark .btnn, .btnn-view {
+    background: #0056b3;
+}
+
+body.dark .card {
+    background: #333;
+}
+
+@media (max-width: 768px){
+    .card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 300px;
+        overflow: hidden;
+    }
+    .btnn {
+        position: absolute;
+        transform: translate(-10px,30px);
+    }
+    .btnn-view {
+        position: absolute;
+        transform: translate(-55px,20px);
+    }
+}
+
+/* Search */
+.search {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Progress */
+.progress-bar {
+    background: #ddd;
+    height: 5px;
+    margin-top: 1rem;
+}
+
+.progress-fill {
+    background: #28a745;
+    height: 100%;
+    transition: width 0.3s;
+}
+
+/* Icons */
+.icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.watched {
+    color: green;
+}
+
+.favorite {
+    color: red;
+}
+
+/* Video Player */
+.video-player {
+    width: 100%;
+    height: 80vh;
+    border: none;
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Buttons */
+.btn {
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+body.dark .btn {
+    background: #0056b3;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

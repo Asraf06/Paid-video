@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Videos - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Study Videos</h1>
+    <div class="nav-links">
+      <span class="toggle" onclick="toggleDarkMode()">🌙 Dark Mode</span>
+      <a href="favorites.html" class="btn">Favorites</a>
+      <a href="index.html" class="btn" onclick="localStorage.clear()">Logout</a>
+    </div>
+  </nav>
+  <div class="container">
+    <input type="text" class="search" placeholder="Search Subjects..." oninput="searchItems(this.value, 'subjects')">
+    <h2>Subjects</h2>
+    <div class="grid" id="subjects"></div>
+    <div class="spinner" id="loader"></div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    if (!localStorage.getItem('loggedIn')) window.location.href = 'index.html';
+    loadData('subjects');
+  </script>
+</body>
+</html>

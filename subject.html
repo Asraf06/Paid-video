@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Videos - Subject</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Study Videos</h1>
+    <div class="nav-links">
+      <span class="toggle" onclick="toggleDarkMode()">🌙 Dark Mode</span>
+      <a href="home.html" class="btn">Back to Home</a>
+    </div>
+  </nav>
+  <div class="container">
+    <input type="text" class="search" placeholder="Search Chapters..." oninput="searchItems(this.value, 'chapters')">
+    <h2 id="subjectTitle"></h2>
+    <div class="grid" id="chapters"></div>
+    <div class="spinner" id="loader"></div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    if (!localStorage.getItem('loggedIn')) window.location.href = 'index.html';
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get('subject');
+    document.getElementById('subjectTitle').textContent = subject || 'Unknown Subject';
+    loadData('chapters', subject);
+  </script>
+</body>
+</html>
