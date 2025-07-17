@@ -31,6 +31,7 @@ function toggleDarkMode() {
       data.subjects.forEach(sub => {
         container.innerHTML += `
           <div class="card fade-in">
+            <img src="1.png" style="width: 400px; height: 200px; object-fit: cover;" alt="Image">
             <div class="card-body">
               <h3>${sub.name}</h3>
               <a href="subject.html?subject=${encodeURIComponent(sub.name)}" class="btnn-view">View Chapters</a>
@@ -45,6 +46,7 @@ function toggleDarkMode() {
       subData.chapters.forEach(chap => {
         container.innerHTML += `
           <div class="card fade-in">
+            <img src="pngaaa.com-3432347 (1).png" style="width: 100px; height: 200px; object-fit: cover;" alt="Image">
             <div class="card-body">
               <h3>${chap.name}</h3>
               <a href="chapter.html?subject=${encodeURIComponent(subject)}&chapter=${encodeURIComponent(chap.name)}" class="btnn-view">View Videos</a>
